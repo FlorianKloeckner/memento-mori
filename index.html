@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memento mori</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="script.js">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body onload="startTime()">
+    <div class="header-container">
+        <div class="header">"Memento mori"</div>
+    </div>
+    <div class="main-content">
+        <div class="birthdate-container">
+            <form>
+                <div class="picker">
+                    <span>
+                        <label for="day">Day:</label>
+                        <select name="day" id="day"></select>
+                    </span>
+                    <span>
+                        <label for="month">Month:</label>
+                        <select name="month" id="month"></select>
+                    </span>
+                    <span>
+                        <label for="year">Year:</label>
+                        <select name="year" id="year">Year</select>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="clock-container">
+            
+            <div class="clock" id="clock">18.2323446342</div>
+        </div>
+    </div>
+    <script>
+        const birthdayDate = new Date(2006, 11, 6, 12)
+        function startTime(){
+            const date = new Date();
+            let time = date.getTime() - birthdayDate.getTime();
+            document.getElementById("clock").innerHTML = (time / 31536000000).toFixed(9)
+            setTimeout(startTime, 100);
+        }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
