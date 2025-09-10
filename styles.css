@@ -2,10 +2,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-color: rgb(31, 31, 31);
+    
 }
 body{
     justify-content: center;
+    background-color: rgb(31, 31, 31);
 }
 
 
@@ -45,6 +46,7 @@ button, input, select, textarea {
     font-family: inherit;
     font-size: 100%;
     color:white;
+    background-color: rgb(31, 31, 31);
     
   }
 
@@ -64,5 +66,16 @@ button, input, select, textarea {
     margin-top: 40px;
     justify-content: space-around;
     width: auto;
+}
+
+.label{
+    width: 400px;
+    color: rgba(240, 248, 255, 0.507);
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -80px;
+    font-family:'Courier New', Courier, monospace;
+
 }
 
